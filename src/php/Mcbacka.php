@@ -48,7 +48,12 @@ class Mcbacka implements McbackaInterface{
     }
 
     public function readData(){
-
+        try {
+            //agarra los datos del archivo
+            return file_get_contents($this->myFile);
+        } catch (Exception $e) {
+            return False;
+        }
     }
 }
 ?>
