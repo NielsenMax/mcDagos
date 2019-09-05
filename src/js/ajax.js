@@ -12,7 +12,7 @@ $(document).ready(function(){
                 $("#response").html(response);                 
             },
             error: function() {
-                console.log("No se ha podido obtener el nombre de la Empresa");
+                console.log("Error del servidor");
                 
             }
         });

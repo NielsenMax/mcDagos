@@ -3,7 +3,7 @@
 namespace McDagos;
 
 interface McbackaInterface{
-    public function loadData();
+    public function loadData($number, $estate);
     public function readData();
 }
 

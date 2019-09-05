@@ -1,11 +1,13 @@
 <?php
 
 namespace McDagos;
+require_once('McbackaInterface.php');
+use McDagos;
 
 class Mcbacka implements McbackaInterface{
 
-    protected $myFile = "../data.json";
-    public function __construct($archivo){
+    protected $myFile;
+    public function __construct($archivo = "../../data.json"){
         $this->myFile = $archivo;
     }
     
@@ -33,14 +35,14 @@ class Mcbacka implements McbackaInterface{
         
         //escribe el json en el archivo
         if(file_put_contents($this->myFile, $jsondata)) {
-                return True;
+            return True;    
         }
         else
-                return False;
+            return False;
 
     }
     catch (Exception $e) {
-                return $e->getMessage();
+        return False;
     }
 
     }

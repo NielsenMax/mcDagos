@@ -1,0 +1,10 @@
+{
+    "autoload": {
+       "psr-4": {
+          "McDagos\\": "src/php"
+       }
+    },
+    "require": {
+        "phpunit/phpunit": "^6"
+    }
+}
