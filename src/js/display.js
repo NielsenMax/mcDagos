@@ -1,6 +1,8 @@
 $(document).ready(function(){
-    dataNew = [];
-    dataOld = [];
+    cookingNew = [];
+    cookingOld = [];
+    readyNew = [];
+    readyOld = [];
     function diffArray(pedidosA,pedidosB){
         eliminables = [];
         agregables = [];
@@ -40,31 +42,46 @@ $(document).ready(function(){
                 //     }
                 //});  
                 
-
                 Object.keys(response).forEach(function(key) {
-                    if(response[key]){
-                        dataNew.push(key);
+                    if(response[key] == 1){
+                        cookingNew.push(key);
+                    }else if(response[key] == 2){
+                        readyNew.push(key);
                     }
                 });
-                data = diffArray(dataOld, dataNew);
+                dataCooking = diffArray(cookingOld, cookingNew);
+                dataReady   = diffArray(readyOld, readyNew);
+                
                 //hace cosas alejo
-                data.agregar.forEach(
+                dataCooking.agregar.forEach(
                     function (key){
-                        response[key];
-                        $( ".containerg" ).append( '<div class="container" id="'+key.toString() + '"><div class="mipene">'+ key.toString() +' </div><div><img src="/mcDagos/13-132538_burger-svg-png-icon-free-download-545640-clip.png" style="width:auto;height:100px" alt="Lights"></div></div> ' );
+                        $( ".containerg" ).append( '<div class="container" id="c'.concat( key.toString(), '"><div class="mipene">', key.toString(),' Cocinando</div><div><img src="/mcDagos/13-132538_burger-svg-png-icon-free-download-545640-clip.png" style="width:auto;height:100px" alt="Lights"></div></div> ' ));
                     }
 
                 );
-                data.eliminar.forEach(
+                dataCooking.eliminar.forEach(
                     function (key){
-                        response[key];
-                        $( "#"+ key.toString() ).fadeOut(2000);
+                        $( "#c"+ key.toString() ).fadeOut(2000);
                         setTimeout(function(){
-                        $( "#"+ key.toString() ).remove();},2000);
+                            $( "#c"+ key.toString() ).remove();},2000);
                     }
                 );
-                dataOld =dataNew;
-                dataNew=[];
+                dataReady.agregar.forEach(
+                    function (key){
+                        $( ".containerg" ).prepend( '<div class="container" id="r'.concat(key.toString(), '"><div class="mipene">', key.toString() ,' Listo</div><div><img src="/mcDagos/13-132538_burger-svg-png-icon-free-download-545640-clip.png" style="width:auto;height:100px" alt="Lights"></div></div> ' ));
+                    }
+                );
+                dataReady.eliminar.forEach(
+                    function (key){
+                        $( "#r"+ key.toString() ).fadeOut(2000);
+                        setTimeout(function(){
+                            $( "#r"+ key.toString() ).remove();},2000);
+                    }
+                );
+                cookingOld = cookingNew;
+                cookingNew = [];
+                readyOld = readyNew;
+                readyNew = [];
             },
             error: function() {
                 console.log("Error del servidor");
