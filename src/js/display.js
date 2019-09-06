@@ -48,13 +48,28 @@ $(document).ready(function(){
                 });
                 data = diffArray(dataOld, dataNew);
                 //hace cosas alejo
+                data.agregar.forEach(
+                    function (key){
+                        response[key];
+                        $( ".containerg" ).append( '<div class="container" id="'+key.toString() + '"><div class="mipene">'+ key.toString() +' </div><div><img src="/mcDagos/13-132538_burger-svg-png-icon-free-download-545640-clip.png" style="width:auto;height:100px" alt="Lights"></div></div> ' );
+                    }
 
+                );
+                data.eliminar.forEach(
+                    function (key){
+                        response[key];
+                        $( "#"+ key.toString() ).fadeOut(2000);
+                        setTimeout(function(){
+                        $( "#"+ key.toString() ).remove();},2000);
+                    }
+                );
                 dataOld =dataNew;
+                dataNew=[];
             },
             error: function() {
                 console.log("Error del servidor");
                 
             }
         });
-    },5000);
+    },1000);
 });
