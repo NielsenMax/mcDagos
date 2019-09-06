@@ -9,7 +9,7 @@ $(document).ready(function(){
             url: "../php/save2JSON.php",             
             dataType: "html",   //expect html to be returned                
             success: function(response){                    
-                $("#response").html(response);                 
+                $("#response").html(response);                
             },
             error: function() {
                 console.log("Error del servidor");
@@ -17,22 +17,4 @@ $(document).ready(function(){
             }
         });
     });
-    setInterval(function(){
-        $.ajax({    
-            type: "POST",
-            url: "../php/readJSON.php",             
-            dataType: "json",          
-            success: function(response){  //response contains the json from data.json                  
-                Object.keys(response).forEach(function(key) { //loop to every key in response
-                    
-                    console.log(key, response[key]);
-                  
-                  });       
-            },
-            error: function() {
-                console.log("Error del servidor");
-                
-            }
-        });
-    },5000);
 });

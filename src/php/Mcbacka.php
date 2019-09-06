@@ -21,10 +21,10 @@ class Mcbacka implements McbackaInterface{
 
         //pasa el archivo json a un array
         $jsonDecode = json_decode($jsondata, true);
-
+        
         //si el archivo es vacio se crea un array vacio, creo q no hace
         if(!$jsonDecode){
-                $jsonDecode = array();
+            $jsonDecode = array();
         }
         
         //Pone los datos en el array
@@ -52,8 +52,9 @@ class Mcbacka implements McbackaInterface{
             //agarra los datos del archivo
             return file_get_contents($this->myFile);
         } catch (Exception $e) {
-            return False;
+            return $e->message;
         }
     }
 }
+
 ?>
