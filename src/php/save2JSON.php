@@ -7,7 +7,7 @@ use McDagos;
 $mcData = new Mcbacka();
 if($_POST['number']){
      if($mcData->loadData($_POST['number'], $_POST['estate'])){
-          echo '<p>Pedido gurdado</p>';
+          echo "";
      }else{
           echo '<p>Error</p>';
      }
