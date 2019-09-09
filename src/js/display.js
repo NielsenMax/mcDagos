@@ -55,7 +55,7 @@ $(document).ready(function(){
                 //hace cosas alejo
                 dataCooking.agregar.forEach(
                     function (key){
-                        $( ".containerg" ).append( '<div class="container" id="c'.concat( key.toString(), '"><div class="mipene">', key.toString(),' Cocinando</div><div><img src="../Images/hamburguesa.png" style="width:auto;height:100px" alt="Lights"></div></div> ' ));
+                        $( ".containerg" ).append( '<div class="container" id="c'.concat( key.toString(), '"> <div class="h1" > ' , key.toString() , '</div> <div class="h1">Cocinando</div><div><img src="../Images/hamburguesa.png" style="width:auto;height:100px" alt="Lights"></div></div> ' ));
                     }
 
                 );
@@ -68,7 +68,7 @@ $(document).ready(function(){
                 );
                 dataReady.agregar.forEach(
                     function (key){
-                        $( ".containerg" ).prepend( '<div class="container" id="r'.concat(key.toString(), '"><div class="mipene">', key.toString() ,' Listo</div><div><img src="../Images/hamburguesa.png" style="width:auto;height:100px" alt="Lights"></div></div> ' ));
+                        $( ".containerg" ).prepend( '<div class="container" id="r'.concat(key.toString(), '"> <div class="h1" > ' , key.toString() , '</div>  <div class="h1">Listo</div><div><img src="../Images/hamburguesa.png" style="width:auto;height:100px" alt="Lights"></div></div> ' ));
                     }
                 );
                 dataReady.eliminar.forEach(
