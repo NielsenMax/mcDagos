@@ -1,39 +1,32 @@
 <html>
 <head>
-        <link rel="stylesheet" href="pages/out.css">
+	<title img src="../Images/control.png"">MC.DAGOS</title>
+        <link rel="stylesheet" href="../index.css">
 </head>
 <body>
-	<div id = "contenedor">
+	<div class = "container">
+		<div class="cont">
 		<button 
 		onclick="window.location.href='./pages/Cajero.html'"
 		type="text"
-		class="botonIndex" >
+		class="botonIndex" style="background-color:MediumAquaMarine;border:none;font-size:500%" >
 			Control de Ordenes
 		</button>
+			<a href="./pages/Cajero.html"><img src="../Images/control.png"style="max-width:100%; 
+                        height:100%; "></a>
+		</div>
+		<div class="cont">
 
 		<button 
-		onclick="window.location.href='./pages/Display.html'" 
+		onclick="window.location.href='./pages/display.html'" 
 		type="text" 
-		class="botonIndex" >
+		class="botonIndex"style="background-color:MediumAquaMarine;border:none;font-size:500%;" >
 		Muestreo de Ordenes
 		</button>
+			<a href="./pages/display.html"><img src="../Images/muestreo.png"style="max-width:100%; 
+                        height:100%;" "></a>
 
-		<div>
-			<img src="Images/control.png"
-			style="
-			position:absolute; 
-			width: 20%; 
-			height: 45%; 
-			margin: -43% 0% 0% 76.58%; ">
-		</div>
-
-		<div>
-			<img src="Images/muestreo.png"
-			style="
-			position:absolute; 
-			width: 20%; 
-			height: 45%; 
-			margin: -21% 0% 0% 76.58%; ">
+	
 		</div>
 	</div>
 </body>
