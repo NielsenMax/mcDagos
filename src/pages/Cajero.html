@@ -3,20 +3,24 @@
     <title>Control de Ordenes</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="../js/ajax.js"></script>
+	<link rel="stylesheet" href="cajero.css">
 </head>
-<body>
+<body background="../Images/blackboar.jpg" style="background-size:cover;">
 
 	<div align="center">
-	  <img  style="width:30%;" src="../Images/chefsito.png"/>
+	  <img  style="height:auto;width:20%;" src="../Images/cookingtry.png" />
 	</div>
 	
 	<div align="center">
 	
-		<input type="number" id="number">
-		<input type="button" id="añadir" value="Añadir orden">
-		<input type="button" id="lista" value="Orden lista">
-		<input type="button" id="eliminar" value="Entregar orden">
-		<div id="response"></div>
-	
+		<input type="number" id="number"style="margin:20px;height:100px;width:20%; font-size:80px;	font-family: 'kg_ten_thousand_reasonsRg'; ">
+		<br>
+	</div>
+	<div class="cajerobotonesgrid">
+		<input class="cajerobotones"type="button" id="añadir" value="Añadir orden">
+		<input class="cajerobotones"type="button" id="lista" value="Orden lista">
+		<input class="cajerobotones"type="button" id="eliminar" value="Entregar orden">
+		<div id="response">
+	</div>
 	</div>
 </body>
