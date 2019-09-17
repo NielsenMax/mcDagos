@@ -68,7 +68,7 @@ $(document).ready(function(){
                 );
                 dataReady.agregar.forEach(
                     function (key){
-                        $( ".containerg" ).prepend( '<div class="container" id="r'.concat(key.toString(), '"> <div class="h1" > ' , key.toString() , '</div>  <div class="h1">Listo</div><div><img src="../Images/serving2.png" style="width:auto;height:200px" alt="Lights"></div></div> ' ));
+                        setTimeout(function(){$( ".containerg" ).prepend( '<div class="container" id="r'.concat(key.toString(), '"> <div class="h1" > ' , key.toString() , '</div>  <div class="h1">Listo</div><div><img src="../Images/serving2.png" style="width:auto;height:200px" alt="Lights"></div></div> ' ));},2000);
                     }
                 );
                 dataReady.eliminar.forEach(

@@ -23,7 +23,7 @@ font-family: 'kg_ten_thousand_reasonsRg';
 
   }
 body{
-	background-image:url('/Images/blackboar.jpg');
+	background-image:url('src/Images/blackboar.jpg');
 background-size:cover;
 }	
 .botonIndex{
@@ -35,8 +35,8 @@ color:#ffffff;
 }
 @font-face {
     font-family: 'kg_ten_thousand_reasonsRg';
-    src: url('/chalk-font/kgtenthousandreasons-webfont.woff2') format('woff2'),
-         url('/chalk-font/kgtenthousandreasons-webfont.woff') format('woff');
+    src: url('src/chalk-font/kgtenthousandreasons-webfont.woff2') format('woff2'),
+         url('src/chalk-font/kgtenthousandreasons-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
