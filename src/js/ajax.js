@@ -53,4 +53,9 @@ $(document).ready(function(){
             }
         });
     });
+	$(document).on('keypress', function(k){
+    	if(k.which == 13){
+        	$('#añadir').click();
+        }            
+    });
 });
