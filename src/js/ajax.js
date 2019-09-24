@@ -55,7 +55,28 @@ $(document).ready(function(){
     });
 	$(document).on('keypress', function(k){
     	if(k.which == 13){
-        	$('#añadir').click();
+			$.ajax({    
+		        type: "POST",
+		        data: {
+		            "number" : $("#number").val()
+		        },
+		        url: "../php/readOneJSON.php",             
+		        dataType: "html",   //expect html to be returned                
+		        success: function(response){  
+					console.log(response);                  
+		            if(response == 1){
+						$('#lista').click();
+					}else if(response == 2){
+						$('#eliminar').click();
+					}else{
+						$('#añadir').click();
+					}               
+		        },
+		        error: function() {
+		            console.log("Error del servidor");
+		            
+		        }
+		    });
         }            
     });
 });
